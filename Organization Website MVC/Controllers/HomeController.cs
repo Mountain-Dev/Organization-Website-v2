@@ -13,6 +13,9 @@ namespace Organization_Website_MVC.Controllers
             return View();
         }
 
-    
+        public ActionResult Organizations()
+        {
+            return View();
+        }
     }
 }
