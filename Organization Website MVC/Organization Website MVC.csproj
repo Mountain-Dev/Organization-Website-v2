@@ -127,7 +127,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="favicon.ico" />
+    <Content Include="CSS\index.css" />
+    <Content Include="CSS\layout.css" />
+    <Content Include="CSS\main.css" />
+    <Content Include="CSS\organizations.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
@@ -160,6 +163,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="IMG\" />
+    <Folder Include="JS\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
