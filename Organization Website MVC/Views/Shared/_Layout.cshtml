@@ -10,17 +10,34 @@
 </head>
 <body>
     <div class="navbar">
-        <div class="navbar-item">
-            <h2><a href="~/Home/Index">Home</a></h2>
-        </div>
+        <a href="~/Home/Index">
+            <div class="navbar-item">
+                <h2>Home</h2>
+            </div>
+        </a>
 
-        <div class="navbar-item">
-            <h2><a href="~/Home/Organizations">Organizations</a></h2>
-        </div>
+        <a href="~/Home/Organizations">
+            <div class="navbar-item">
+                <h2>Organizations</h2>
+            </div>
+        </a>
     </div>
 
     <div class="container">
         @RenderBody()
+        <hr />
+
+    </div>
+    <div class="footer">
+        <div class="footer-item">
+            <p>&copy; @DateTime.Now.Year - Organizations</p>
+            <p>Contact: <a>xxx</a></p>
+            <p>Adress: <a>xxx</a></p>
+        </div>
+
+        <div class="footer-item">
+            <p>Website developed by: <a href="https://github.com/Mountain-Dev">Mountain Dev.</a></p>
+        </div>
     </div>
 </body>
 </html>
