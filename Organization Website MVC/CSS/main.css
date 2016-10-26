@@ -13,3 +13,9 @@ a {
 a:hover {
     color: #7f8c8d;
 }
+
+.container-side {
+    width: calc(50vw - 40px);
+    padding: 20px;
+    float: left;
+}
