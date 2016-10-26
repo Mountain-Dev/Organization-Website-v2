@@ -1,3 +1,11 @@
 ﻿#organization-list {
 
 }
+#makeOrg{
+    margin-top:5vh;
+    background-color: #ecf0f1;
+    border-radius:15px;
+    width: calc(35vw - 40px);
+    float:right;
+    text-align:center;
+}

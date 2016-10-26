@@ -1,7 +1,13 @@
 ﻿@model System.Collections.ArrayList
 @{
     ViewBag.Title = "Home Page";
+    
 }
+
+@section stylesheet {
+    <link rel="stylesheet" href="~/CSS/index.css" />
+    }
+
 <div class="container-side">
     <h1>Organizations:</h1>
     <hr />
@@ -14,7 +20,7 @@
                 <li>@org.organization_name</li>
             }
 
-            }
+            
         </ul>
     </div>
 
@@ -30,13 +36,29 @@
         </ul>
     </div>
 </div>
-<div class="container-side">
+
+<div class="container-side" id="makeOrg">
     <h1>
         Create
         <br />
-        organization:
+        Organization:
     </h1>
     <hr />
-
+    <h2>Organization Name:</h2>
+    <br />
+    <form action="#" id="orgForm">
+        <input type="text" name="orgName" />
+        <br />
+        <br />
+        <h2>About this organization:</h2>
+        <br />
+        <textarea name="comment" form="orgForm" rows="6" cols="50"></textarea>
+        <br />
+        <br />
+        <input type="submit" value="Add Organization" />
+    
+    </form>
+        
+    
 
 </div>
