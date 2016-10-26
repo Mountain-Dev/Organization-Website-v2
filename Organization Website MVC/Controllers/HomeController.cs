@@ -8,8 +8,8 @@ namespace Organization_Website_MVC.Controllers
 {
     public class HomeController : Controller
     {
-
         WebsiteDBEntities WebsiteDB;
+
         System.Collections.ArrayList allData;
 
         public HomeController()
@@ -18,16 +18,17 @@ namespace Organization_Website_MVC.Controllers
 
             allData = new System.Collections.ArrayList();
 
-            allData.Add(WebsiteDB.connections);
-            allData.Add(WebsiteDB.organizations);
-            allData.Add(WebsiteDB.people);
+            allData.Add(WebsiteDB.organizations.ToList());
+            allData.Add(WebsiteDB.people.ToList());
+            allData.Add(WebsiteDB.connections.ToList());
+
 
         }
 
 
         public ActionResult Index()
         {
-            return View();
+            return View(allData);
         }
 
         public ActionResult Organizations()
