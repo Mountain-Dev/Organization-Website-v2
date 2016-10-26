@@ -31,6 +31,11 @@ namespace Organization_Website_MVC.Controllers
             return View(allData);
         }
 
+        public ActionResult Index_dev()
+        {
+            return View(allData);
+        }
+
         public ActionResult Organizations()
         {
             return View();
