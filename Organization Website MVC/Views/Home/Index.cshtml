@@ -1,14 +1,23 @@
-﻿@{
+﻿@model System.Collections.ArrayList
+@{
     ViewBag.Title = "Home Page";
 }
-
 <div class="container-side">
     <h1>Organizations:</h1>
     <hr />
     <div id="oraganization-list">
+        <ul>
+
+            @foreach (var item in ((List<organization>)Model[0]))
+            {
+                organization org = (organization)item;
+                <li>@org.organization_name</li>
+            }
+
+            }
+        </ul>
     </div>
 </div>
-
 <div class="container-side">
     <h1>
         Create
