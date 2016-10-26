@@ -46,9 +46,8 @@ hr {
 }
 
 .footer-item:nth-child(2) {
-    width: calc(50vw - 80px);
+    width: 50vw;
     text-align: right;
-    padding-top: 50px;
 }
 
 .footer-item a {
