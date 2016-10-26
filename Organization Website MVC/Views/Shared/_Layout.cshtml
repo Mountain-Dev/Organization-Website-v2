@@ -7,19 +7,17 @@
 
     <link href="~/CSS/layout.css" rel="stylesheet" />
     <link href="~/CSS/main.css" rel="stylesheet" />
+
+    @RenderSection("stylesheet",false)
 </head>
 <body>
     <div class="navbar">
-        <a href="~/Home/Index">
-            <div class="navbar-item">
-                <h2>Home</h2>
-            </div>
+        <a href="~/Home/Index" class="navbar-item">
+            <h2>Home</h2>
         </a>
 
-        <a href="~/Home/Organizations">
-            <div class="navbar-item">
+        <a href="~/Home/Organizations" class="navbar-item">
                 <h2>Organizations</h2>
-            </div>
         </a>
     </div>
 

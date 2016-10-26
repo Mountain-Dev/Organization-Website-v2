@@ -2,14 +2,25 @@
     width: calc(100vw - 40px); 
     overflow: auto;
     background-color: #ecf0f1;
-    
+    border-radius:15px; 
+
 }
 
 .navbar-item {
-    width: calc(50vw - 80px);
+    width: calc(50vw - 25px);
     float: left;
     text-align: center;
+    margin-top:10px;
+    margin-bottom:10px;
+        
 }
+.navbar-item:first-child {
+    border-right: solid 1px black;
+}
+.navbar-item:last-child {
+    border-left: solid 1px black;
+}
+
 .navbar-item:hover {
     color: #7f8c8d; 
 }
