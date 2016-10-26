@@ -1,23 +1,15 @@
 ﻿.navbar {
-    width: 100vw; 
+    width: calc(100vw - 40px); 
     overflow: auto;
     background-color: #ecf0f1;
+    
 }
 
 .navbar-item {
-    width: calc(50vw - 41px);
-    padding: 20px;
+    width: calc(50vw - 80px);
     float: left;
     text-align: center;
-    color: #000;
 }
-.navbar-item:first-child {
-    border-right: solid 1px #7f8c8d;
-}
-.navbar-item:nth-child(2) {
-    border-left: solid 1px #7f8c8d;
-}
-
 .navbar-item:hover {
     color: #7f8c8d; 
 }
@@ -29,27 +21,4 @@
 
 hr {
     margin: 20px 0;
-}
-
-.footer {
-    width: 100vw;
-    overflow: auto;
-    background-color: #ecf0f1;
-}
-
-.footer-item {
-    width: calc(50vw - 60px);
-    padding: 30px;
-    float: left;
-    font-size: small;
-    text-align: center;
-}
-
-.footer-item:nth-child(2) {
-    width: 50vw;
-    text-align: right;
-}
-
-.footer-item a {
-    color: red;
 }

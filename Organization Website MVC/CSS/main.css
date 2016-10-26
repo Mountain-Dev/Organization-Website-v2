@@ -4,6 +4,10 @@
     font-family: Arial, sans-serif;
 }
 
+body {
+    margin: 20px;
+}
+
 a {
     color: black;
     text-decoration: none;
@@ -15,7 +19,7 @@ a:hover {
 }
 
 .container-side {
-    width: calc(50vw - 40px);
+    width: calc(45vw - 40px);
     padding: 20px;
     float: left;
 }
