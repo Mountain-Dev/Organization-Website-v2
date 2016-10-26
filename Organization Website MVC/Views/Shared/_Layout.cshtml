@@ -5,35 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
 
-    <link href="~/CSS/layout.css" rel="stylesheet" />
-    <link href="~/CSS/main.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    @RenderSection("stylesheet",false)
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/font-awesome/css/font-awesome.min.css">
+
+    <!-- CSS files -->
+    <link href="~/Content/layout.css" rel="stylesheet" />
+
+    @RenderSection("stylesheet", false)
 </head>
 <body>
-    <div class="navbar">
-        <a href="~/Home/Index" class="navbar-item">
-            <h2>Home</h2>
-        </a>
-
-        <a href="~/Home/Organizations" class="navbar-item">
-                <h2>Organizations</h2>
-        </a>
+    <div class="container">
+        <div class="navbar navbar-static-top navbar-inverse">
+            <div class="container"></div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">MO</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a>Home</a></li>
+                    <li><a>Organizations</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     <div class="container">
         @RenderBody()
         <hr />
-
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Mountain Dev.</p>
+        </footer>
     </div>
-    @*<div class="footer">
-        <div class="footer-item">
-            <p>&copy; @DateTime.Now.Year - Organizations</p>
-        </div>
 
-        <div class="footer-item">
-            <p>Website developed by: <a href="https://github.com/Mountain-Dev">Mountain Dev.</a></p>
-        </div>
-    </div>*@
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>

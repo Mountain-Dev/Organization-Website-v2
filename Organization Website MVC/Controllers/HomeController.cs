@@ -21,10 +21,7 @@ namespace Organization_Website_MVC.Controllers
             allData.Add(WebsiteDB.organizations.ToList());
             allData.Add(WebsiteDB.people.ToList());
             allData.Add(WebsiteDB.connections.ToList());
-
-
         }
-
 
         public ActionResult Index()
         {
