@@ -6,6 +6,10 @@ using System.Web.Mvc;
 
 namespace Organization_Website_MVC.Controllers
 {
+
+
+
+
     public class HomeController : Controller
     {
         WebsiteDBEntities WebsiteDB;
@@ -38,5 +42,31 @@ namespace Organization_Website_MVC.Controllers
         {
             return View();
         }
+
+
+        [HttpGet]
+        public ActionResult RegisterOrganization()
+        {
+            var organization = new organization();
+            return View( organization );
+        }
+
+        [HttpPost]
+        public ActionResult RegisterOrganization(organization organization)
+        {
+
+            if (ModelState.IsValid)
+            {
+
+                WebsiteDB.organizations.Add(organization);
+
+                WebsiteDB.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+
+
     }
 }

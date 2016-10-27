@@ -263,6 +263,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Organizations.cshtml" />
     <Content Include="Views\Home\Index_dev.cshtml" />
+    <Content Include="Views\Home\RegisterOrganization.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="connection-id" />
           </Key>
-          <Property Name="connection-id" Type="int" Nullable="false" />
+          <Property Name="connection-id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="organization-id" Type="int" Nullable="false" />
           <Property Name="person-id" Type="int" Nullable="false" />
         </EntityType>
@@ -17,7 +17,7 @@
           <Key>
             <PropertyRef Name="organization-id" />
           </Key>
-          <Property Name="organization-id" Type="int" Nullable="false" />
+          <Property Name="organization-id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="organization-name" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="organization-email" Type="varchar" MaxLength="50" />
           <Property Name="organization-phone" Type="varchar" MaxLength="20" />
@@ -27,14 +27,14 @@
           <Key>
             <PropertyRef Name="person-id" />
           </Key>
-          <Property Name="person-id" Type="int" Nullable="false" />
+          <Property Name="person-id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="person-first-name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="person-last-name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="person-phone-number" Type="varchar" MaxLength="50" />
           <Property Name="person-email" Type="varchar" MaxLength="50" />
           <Property Name="person-adress" Type="varchar" MaxLength="50" />
         </EntityType>
-        <Association Name="FK__connectio__organ__3E52440B">
+        <Association Name="FK__connectio__organ__4BAC3F29">
           <End Role="organization" Type="Self.organization" Multiplicity="1" />
           <End Role="connection" Type="Self.connection" Multiplicity="*" />
           <ReferentialConstraint>
@@ -46,7 +46,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__connectio__perso__44FF419A">
+        <Association Name="FK__connectio__perso__4CA06362">
           <End Role="person" Type="Self.person" Multiplicity="1" />
           <End Role="connection" Type="Self.connection" Multiplicity="*" />
           <ReferentialConstraint>
@@ -62,11 +62,11 @@
           <EntitySet Name="connection" EntityType="Self.connection" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="organization" EntityType="Self.organization" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="person" EntityType="Self.person" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__connectio__organ__3E52440B" Association="Self.FK__connectio__organ__3E52440B">
+          <AssociationSet Name="FK__connectio__organ__4BAC3F29" Association="Self.FK__connectio__organ__4BAC3F29">
             <End Role="organization" EntitySet="organization" />
             <End Role="connection" EntitySet="connection" />
           </AssociationSet>
-          <AssociationSet Name="FK__connectio__perso__44FF419A" Association="Self.FK__connectio__perso__44FF419A">
+          <AssociationSet Name="FK__connectio__perso__4CA06362" Association="Self.FK__connectio__perso__4CA06362">
             <End Role="person" EntitySet="person" />
             <End Role="connection" EntitySet="connection" />
           </AssociationSet>
@@ -80,36 +80,36 @@
           <Key>
             <PropertyRef Name="connection_id" />
           </Key>
-          <Property Name="connection_id" Type="Int32" Nullable="false" />
+          <Property Name="connection_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="organization_id" Type="Int32" Nullable="false" />
           <Property Name="person_id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="organization" Relationship="Self.FK__connectio__organ__3E52440B" FromRole="connection" ToRole="organization" />
-          <NavigationProperty Name="person" Relationship="Self.FK__connectio__perso__44FF419A" FromRole="connection" ToRole="person" />
+          <NavigationProperty Name="organization" Relationship="Self.FK__connectio__organ__4BAC3F29" FromRole="connection" ToRole="organization" />
+          <NavigationProperty Name="person" Relationship="Self.FK__connectio__perso__4CA06362" FromRole="connection" ToRole="person" />
         </EntityType>
         <EntityType Name="organization">
           <Key>
             <PropertyRef Name="organization_id" />
           </Key>
-          <Property Name="organization_id" Type="Int32" Nullable="false" />
+          <Property Name="organization_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="organization_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="organization_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="organization_phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="organization_description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="connections" Relationship="Self.FK__connectio__organ__3E52440B" FromRole="organization" ToRole="connection" />
+          <NavigationProperty Name="connections" Relationship="Self.FK__connectio__organ__4BAC3F29" FromRole="organization" ToRole="connection" />
         </EntityType>
         <EntityType Name="person">
           <Key>
             <PropertyRef Name="person_id" />
           </Key>
-          <Property Name="person_id" Type="Int32" Nullable="false" />
+          <Property Name="person_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="person_first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="person_last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="person_phone_number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="person_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="person_adress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="connections" Relationship="Self.FK__connectio__perso__44FF419A" FromRole="person" ToRole="connection" />
+          <NavigationProperty Name="connections" Relationship="Self.FK__connectio__perso__4CA06362" FromRole="person" ToRole="connection" />
         </EntityType>
-        <Association Name="FK__connectio__organ__3E52440B">
+        <Association Name="FK__connectio__organ__4BAC3F29">
           <End Role="organization" Type="Self.organization" Multiplicity="1" />
           <End Role="connection" Type="Self.connection" Multiplicity="*" />
           <ReferentialConstraint>
@@ -121,7 +121,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__connectio__perso__44FF419A">
+        <Association Name="FK__connectio__perso__4CA06362">
           <End Role="person" Type="Self.person" Multiplicity="1" />
           <End Role="connection" Type="Self.connection" Multiplicity="*" />
           <ReferentialConstraint>
@@ -137,11 +137,11 @@
           <EntitySet Name="connections" EntityType="Self.connection" />
           <EntitySet Name="organizations" EntityType="Self.organization" />
           <EntitySet Name="people" EntityType="Self.person" />
-          <AssociationSet Name="FK__connectio__organ__3E52440B" Association="Self.FK__connectio__organ__3E52440B">
+          <AssociationSet Name="FK__connectio__organ__4BAC3F29" Association="Self.FK__connectio__organ__4BAC3F29">
             <End Role="organization" EntitySet="organizations" />
             <End Role="connection" EntitySet="connections" />
           </AssociationSet>
-          <AssociationSet Name="FK__connectio__perso__44FF419A" Association="Self.FK__connectio__perso__44FF419A">
+          <AssociationSet Name="FK__connectio__perso__4CA06362" Association="Self.FK__connectio__perso__4CA06362">
             <End Role="person" EntitySet="people" />
             <End Role="connection" EntitySet="connections" />
           </AssociationSet>
