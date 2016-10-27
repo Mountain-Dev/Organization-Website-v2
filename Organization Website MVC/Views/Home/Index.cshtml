@@ -1,7 +1,9 @@
 ﻿@model System.Collections.ArrayList
 @{
-    ViewBag.Title = "Home Page";
-
+    ViewBag.Title = "Home";
+    List<organization> orgList = (List<organization>)Model[0];
+    List<person> personList = (List<person>)Model[1];
+    List<connection> connectionList = (List<connection>)Model[2];
 }
 
 @section stylesheet
@@ -11,11 +13,16 @@
 
 <div class="col-lg-8">
     <div class="jumbotron">
-        <h2>Organizations</h2>
+        <h2>Organizations:</h2>
         <hr />
         <div class="list-group">
-            <a href="#" class="list-group-item">Name 1</a>
-            <a href="#" class="list-group-item">Name 2</a>
+            @foreach (var item in ((List<organization>)Model[0]))
+            {
+                organization org = (organization)item;
+                <a href="#" class="list-group-item">
+                    @org.organization_name
+                </a>
+            }
         </div>
 
         @*<nav aria-label="Page navigation">
@@ -74,8 +81,6 @@
     </div>
 </div>
 
-<div class="col-lg-4"></div>
-<div class="col-lg-4"></div>
 <div class="col-lg-4">
     <div class="jumbotron">
         <h2>
