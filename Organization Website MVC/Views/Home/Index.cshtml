@@ -5,108 +5,22 @@
     List<person> personList = (List<person>)Model[1];
     List<connection> connectionList = (List<connection>)Model[2];
 }
-
 @section stylesheet
     {
     <link rel="stylesheet" href="~/CSS/index.css" />
 }
 
-<div class="col-lg-8">
-    <div class="jumbotron">
-        <h2>Organizations:</h2>
-        <hr />
-        <div class="list-group">
-            @foreach (var item in ((List<organization>)Model[0]))
+<div class="jumbotron">
+    <h2>Organizations:</h2>
+    <hr />
+    <div class="list-group">
+        @foreach (var item in ((List<organization>)Model[0]))
             {
                 organization org = (organization)item;
-                <a href="#" class="list-group-item">
-                    @org.organization_name
-                </a>
-            }
-            <a class="list-group-item">Name</a>
-            <a class="list-group-item">Name</a>
-            <a class="list-group-item">Name</a>
-            <a class="list-group-item">Name</a>
-            <a class="list-group-item">Name</a>
-        </div>
-
-
-    </div>
-</div>
-
-<div class="col-lg-4">
-    <div class="jumbotron">
-        <h2>
-            Create
-            <br />
-            organization:
-        </h2>
-        <hr />
-        <div class="main-login main-center">
-            <form class="form-horizontal" method="post">
-                <div class="form-group">
-
-
-                    <div class="col-sm-12">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="org-name-to-reg" id="name-input" placeholder="Organization name" />
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <button type="button" class="btn btn-primary btn-lg btn-block login-button" onclick="alert">Register</button>
-                    <script src="~/JS/register-org.js"></script>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
-<div class="col-lg-4">
-    <div class="jumbotron">
-        <h2>
-            Register
-            <br />
-            member:
-        </h2>
-        <hr />
-        <div class="main-login main-center">
-            <form class="form-horizontal" method="post">
-                <div class="form-group">
-                    <div class="col-sm-12">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="firstName" id="name" placeholder="First name" />
-                        </div>
-                    </div>
-                    <br />
-                    <div class="col-sm-12">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="lastName" id="name" placeholder="Last name" />
-                        </div>
-                    </div>
-                    <br />
-                    <div class="col-sm-12">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="email" id="name" placeholder="E-mail adress" />
-                        </div>
-                    </div>
-                    <br />
-                    <div class="col-sm-12">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
-                            <input type="text" class="form-control" name="phoneNumber" id="name" placeholder="Phone number" />
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group ">
-                    <button type="button" class="btn btn-primary btn-lg btn-block login-button" onclick="alert">Register</button>
-                </div>
-            </form>
-        </div>
+            <a href="#" class="list-group-item">
+                @org.organization_name
+            </a>
+        }
     </div>
 </div>
 
