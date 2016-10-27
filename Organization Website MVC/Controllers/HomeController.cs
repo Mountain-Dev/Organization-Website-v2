@@ -7,10 +7,6 @@ using Organization_Website_MVC.Models;
 
 namespace Organization_Website_MVC.Controllers
 {
-
-
-
-
     public class HomeController : Controller
     {
         WebsiteDBEntities WebsiteDB;
@@ -82,10 +78,14 @@ namespace Organization_Website_MVC.Controllers
             if (ModelState.IsValid)
             {
                 person newPerson = model.person;
+                connection newConnection = model.connection;
+                
 
                 WebsiteDB.people.Add(newPerson);
-
+                newConnection.person_id = newPerson.person_id;
+                WebsiteDB.connections.Add(newConnection);
                 WebsiteDB.SaveChanges();
+
                 return RedirectToAction("Index");
             }
 

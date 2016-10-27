@@ -1,4 +1,5 @@
 ﻿@model Organization_Website_MVC.Models.MemberRegistrationViewModel
+@*@model System.Collections.ArrayList*@
 @{
     ViewBag.Title = "RegisterPerson";
 }
@@ -14,8 +15,11 @@
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                         @Html.TextBoxFor(m => m.person.person_first_name)
-                        @Html.TextBoxFor(m => m.person.person_last_name)
-                        @*<input type="text" class="form-control" name="org-name-to-reg" id="name-input" placeholder="Organization name" />*@
+                        @Html.TextBoxFor(m => m.person.person_last_name)<br />
+                        @Html.DropDownListFor(m => m.connection.organization_id, new SelectList(Model.organizations, "organization_id", "organization_name"))
+                        @*@Model.connections.Find(m => m. == Model.person.Id) *@
+                        @*@Html.LabelFor(m => m,, "Organisation: ")
+                            @<input type="text" class="form-control" name="org-name-to-reg" id="name-input" placeholder="Organization name" />*@
                     </div>
                 </div>
             </div>
