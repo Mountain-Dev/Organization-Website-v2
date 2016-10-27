@@ -176,6 +176,7 @@
     <Content Include="font-awesome\HELP-US-OUT.txt" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="JS\register-org.js" />
     <Content Include="Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model.Context.cs</LastGenOutput>
@@ -266,7 +267,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="IMG\" />
-    <Folder Include="JS\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

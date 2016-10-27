@@ -18,9 +18,6 @@ a:hover {
     color: #7f8c8d;
 }
 
-.container-side {
-    width: calc(45vw - 40px);
-    padding: 20px;
-    float: left;
-    
+ul {
+    list-style: none;
 }
