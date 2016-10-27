@@ -1,0 +1,28 @@
+﻿@model Organization_Website_MVC.Models.MemberRegistrationViewModel
+@{
+    ViewBag.Title = "RegisterPerson";
+}
+
+@using (Html.BeginForm())
+{
+
+    <div class="main-login main-center">
+        <form class="form-horizontal" name="registerPerson" method="post">
+            <div class="form-group">
+
+                <div class="col-sm-12">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                        @Html.TextBoxFor(m => m.person.person_first_name)
+                        @Html.TextBoxFor(m => m.person.person_last_name)
+                        @*<input type="text" class="form-control" name="org-name-to-reg" id="name-input" placeholder="Organization name" />*@
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-lg btn-block login-button" onclick="validateForm('registerPerson')">Register</button>
+                @*<script src="~/JS/register-org.js"></script>*@
+            </div>
+        </form>
+    </div>
+}

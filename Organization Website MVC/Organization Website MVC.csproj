@@ -152,6 +152,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\MemberRegistrationViewModel.cs" />
     <Compile Include="organization.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -264,11 +265,11 @@
     <Content Include="Views\Home\Organizations.cshtml" />
     <Content Include="Views\Home\Index_dev.cshtml" />
     <Content Include="Views\Home\RegisterOrganization.cshtml" />
+    <Content Include="Views\Home\RegisterPerson.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="IMG\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

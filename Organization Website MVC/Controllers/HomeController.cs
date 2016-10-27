@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Organization_Website_MVC.Models;
 
 namespace Organization_Website_MVC.Controllers
 {
@@ -59,6 +60,30 @@ namespace Organization_Website_MVC.Controllers
             {
 
                 WebsiteDB.organizations.Add(organization);
+
+                WebsiteDB.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View();
+        }
+
+
+        [HttpGet]
+        public ActionResult RegisterPerson()
+        {
+            var model = new MemberRegistrationViewModel(WebsiteDB.organizations.ToList());
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult RegisterPerson(MemberRegistrationViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                person newPerson = model.person;
+
+                WebsiteDB.people.Add(newPerson);
 
                 WebsiteDB.SaveChanges();
                 return RedirectToAction("Index");
