@@ -26,7 +26,7 @@ namespace Organization_Website_MVC
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                      "~/Content/Style.css"));
+                      "~/Content/layout.css"));
         }
     }
 }
