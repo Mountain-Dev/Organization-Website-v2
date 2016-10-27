@@ -130,33 +130,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="connection.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Model.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="organization.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="person.cs">
-      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -177,23 +153,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="JS\register-org.js" />
-    <Content Include="Model.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model.Context.cs</LastGenOutput>
-      <DependentUpon>Model.edmx</DependentUpon>
-    </Content>
-    <Content Include="Model.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model.edmx</DependentUpon>
-      <LastGenOutput>Model.cs</LastGenOutput>
-    </Content>
-    <EntityDeploy Include="Model.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Model.edmx.diagram">
-      <DependentUpon>Model.edmx</DependentUpon>
-    </Content>
     <Content Include="font-awesome\fonts\fontawesome-webfont.eot" />
     <Content Include="font-awesome\fonts\fontawesome-webfont.ttf" />
     <Content Include="font-awesome\fonts\fontawesome-webfont.woff" />
