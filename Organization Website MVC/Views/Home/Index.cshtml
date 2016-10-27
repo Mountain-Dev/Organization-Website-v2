@@ -13,13 +13,31 @@
     <div class="jumbotron">
         <h2>Organizations</h2>
         <hr />
-            <div class="list-group">
-                <a><button type="button" class="list-group-item"></button></a>
-                <a><button type="button" class="list-group-item"></button></a>
-                <a><button type="button" class="list-group-item"></button></a>
-                <a><button type="button" class="list-group-item"></button></a>
-                <a><button type="button" class="list-group-item"></button></a>
-            </div>
+        <div class="list-group">
+            <a href="#" class="list-group-item">Name 1</a>
+            <a href="#" class="list-group-item">Name 2</a>
+        </div>
+
+        @*<nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>*@
+
     </div>
 </div>
 
@@ -34,10 +52,12 @@
         <div class="main-login main-center">
             <form class="form-horizontal" method="post" action="#">
                 <div class="form-group">
-                    <div class="alert alert-danger alert-dismissible" role="alert" style="display: none;" id="alert-org">
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <strong>Warning!</strong> Please enter a organization name to continue.
-                    </div>
+
+                    @*<div class="alert alert-danger alert-dismissible" role="alert" style="display: none;" id="alert-org">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong>Warning!</strong> Please enter a organization name to continue.
+                        </div>*@
+
                     <div class="col-sm-12">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
@@ -53,3 +73,50 @@
         </div>
     </div>
 </div>
+
+<div class="col-lg-4"></div>
+<div class="col-lg-4"></div>
+<div class="col-lg-4">
+    <div class="jumbotron">
+        <h2>
+            Register
+            <br />
+            member:
+        </h2>
+        <hr />
+        <div class="main-login main-center">
+            <form class="form-horizontal" method="post" action="#">
+                <div class="form-group">
+                    <div class="col-sm-12">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="First name" />
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Last name" />
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="E-mail adress" />
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Phone number" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group ">
+                    <button type="button" class="btn btn-primary btn-lg btn-block login-button" onclick="alert">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
