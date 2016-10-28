@@ -263,7 +263,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Organizations.cshtml" />
-    <Content Include="Views\Home\Index_dev.cshtml" />
     <Content Include="Views\Home\RegisterOrganization.cshtml" />
     <Content Include="Views\Home\RegisterPerson.cshtml" />
   </ItemGroup>
