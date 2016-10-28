@@ -8,14 +8,23 @@
 {
 
     <div class="main-login main-center">
+        <h3>* = nessecary</h3>
         <form class="form-horizontal" name="registerPerson" method="post">
             <div class="form-group">
-
+                
                 <div class="col-sm-12">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                        <h4>First and last name:*</h4>
                         @Html.TextBoxFor(m => m.person.person_first_name)
                         @Html.TextBoxFor(m => m.person.person_last_name)<br />
+                        <h4>Phone Number:</h4>
+                        @Html.TextBoxFor(m => m.person.person_phone_number)<br />
+                        <h4>Adress:</h4>
+                        @Html.TextBoxFor(m => m.person.person_adress)<br />
+                        <h4>Email:</h4>
+                        @Html.TextBoxFor(m => m.person.person_email)<br />
+                        <h4>Choose organization:*</h4>
                         @Html.DropDownListFor(m => m.connection.organization_id, new SelectList(Model.organizations, "organization_id", "organization_name"))
                         @*@Model.connections.Find(m => m. == Model.person.Id) *@
                         @*@Html.LabelFor(m => m,, "Organisation: ")
