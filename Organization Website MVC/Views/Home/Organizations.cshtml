@@ -1,7 +1,24 @@
-﻿
+﻿@model System.Collections.ArrayList
 @{
     ViewBag.Title = "Organizations";
+    List<organization> orgList = (List<organization>)Model[0];
+    List<person> personList = (List<person>)Model[1];
+    List<connection> connectionList = (List<connection>)Model[2];
 }
 
-<h2>Organizations</h2>
-
+<div class="jumbotron">
+    <h2>Organization list:</h2>
+    <p>
+        Down bleow is a the full list of every organization registered in our database.
+    </p>
+    <hr />
+    <div class="list-group">
+        @foreach (var item in ((List<organization>)Model[0]))
+            {
+                organization org = (organization)item;
+            <a href="#" class="list-group-item">
+                @org.organization_name
+            </a>
+        }
+    </div>
+</div>

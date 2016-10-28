@@ -11,16 +11,9 @@
 }
 
 <div class="jumbotron">
-    <h2>Organizations:</h2>
-    <hr />
-    <div class="list-group">
-        @foreach (var item in ((List<organization>)Model[0]))
-            {
-                organization org = (organization)item;
-            <a href="#" class="list-group-item">
-                @org.organization_name
-            </a>
-        }
-    </div>
+    <h1>
+        Members and Organizations
+    </h1>
+    <p>This is a website that you can use to register organizations and members to them.</p>
 </div>
 
