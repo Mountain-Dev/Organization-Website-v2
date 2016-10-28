@@ -16,22 +16,37 @@
                     <h4>* = nessecary</h4>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                        <h4>First Name:*</h4>
-                        @Html.TextBoxFor(m => m.person.person_first_name, new { data_bind = "Name", @class = "form-control" })<br />
-                        <h4>Last name:*</h4>
-                        @Html.TextBoxFor(m => m.person.person_last_name, new { data_bind = "Name", @class = "form-control" })<br />
-                        <h4>Phone Number:</h4>
-                        @Html.TextBoxFor(m => m.person.person_phone_number, new { data_bind = "Name", @class = "form-control" })<br />
-                        <h4>Adress:</h4>
-                        @Html.TextBoxFor(m => m.person.person_adress, new { data_bind = "Name", @class = "form-control" })<br />
-                        <h4>Email:</h4>
-                        @Html.TextBoxFor(m => m.person.person_email, new { data_bind = "Name", @class = "form-control" })<br />
+                        @Html.TextBoxFor(m => m.person.person_first_name, new { data_bind = "Name", @class = "form-control", @placeholder = "First Name*" })<br />
+                    </div>
+                    <br />
+                    <div class="input-group">                     
+                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                        @Html.TextBoxFor(m => m.person.person_last_name, new { data_bind = "Name", @class = "form-control", @placeholder = "Last Name*" })<br />
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+                        @Html.TextBoxFor(m => m.person.person_phone_number, new { data_bind = "Name", @class = "form-control", @placeholder = "Phone number:" })<br />
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
+                        @Html.TextBoxFor(m => m.person.person_adress, new { data_bind = "Name", @class = "form-control", @placeholder = "Address:" })<br />
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                        @Html.TextBoxFor(m => m.person.person_email, new { data_bind = "Name", @class = "form-control", @placeholder = "Email:" })<br />
+                    </div>
+                    <br />
+                    <div class="input-group">
                         <h4>Choose organization:*</h4>
                         @Html.DropDownListFor(m => m.connection.organization_id, new SelectList(Model.organizations, "organization_id", "organization_name"))
                         @*@Model.connections.Find(m => m. == Model.person.Id) *@
                         @*@Html.LabelFor(m => m,, "Organisation: ")
-                            @<input type="text" class="form-control" name="org-name-to-reg" id="name-input" placeholder="Organization name" />*@
+            @<input type="text" class="form-control" name="org-name-to-reg" id="name-input" placeholder="Organization name" />*@
                     </div>
+                    <br />
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-lg btn-block login-button" onclick="validateForm('registerPerson')">Register</button>
                         @*<script src="~/JS/register-org.js"></script>*@
