@@ -18,22 +18,27 @@
                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                         @Html.TextBoxFor(m => m.person.person_first_name, new { data_bind = "Name", @class = "form-control", @placeholder = "First Name*" })<br />
                     </div>
+                    <br />
                     <div class="input-group">                     
                         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                         @Html.TextBoxFor(m => m.person.person_last_name, new { data_bind = "Name", @class = "form-control", @placeholder = "Last Name*" })<br />
                     </div>
+                    <br />
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
                         @Html.TextBoxFor(m => m.person.person_phone_number, new { data_bind = "Name", @class = "form-control", @placeholder = "Phone number:" })<br />
                     </div>
+                    <br />
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-map-marker fa" aria-hidden="true"></i></span>
                         @Html.TextBoxFor(m => m.person.person_adress, new { data_bind = "Name", @class = "form-control", @placeholder = "Address:" })<br />
                     </div>
+                    <br />
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
                         @Html.TextBoxFor(m => m.person.person_email, new { data_bind = "Name", @class = "form-control", @placeholder = "Email:" })<br />
                     </div>
+                    <br />
                     <div class="input-group">
                         <h4>Choose organization:*</h4>
                         @Html.DropDownListFor(m => m.connection.organization_id, new SelectList(Model.organizations, "organization_id", "organization_name"))
