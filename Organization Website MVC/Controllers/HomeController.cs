@@ -26,7 +26,7 @@ namespace Organization_Website_MVC.Controllers
 
         public ActionResult Index()
         {
-            return View(allData);
+            return View();
         }
 
         public ActionResult Organizations()
