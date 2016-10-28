@@ -52,7 +52,7 @@ namespace Organization_Website_MVC.Controllers
                 WebsiteDB.organizations.Add(organization);
 
                 WebsiteDB.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Organizations");
             }
 
             return View();
