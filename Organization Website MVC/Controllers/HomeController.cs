@@ -39,7 +39,7 @@ namespace Organization_Website_MVC.Controllers
         public ActionResult RegisterOrganization()
         {
             var organization = new organization();
-            return View( organization );
+            return View(organization);
         }
 
         [HttpPost]
@@ -48,7 +48,6 @@ namespace Organization_Website_MVC.Controllers
 
             if (ModelState.IsValid)
             {
-
                 WebsiteDB.organizations.Add(organization);
 
                 WebsiteDB.SaveChanges();

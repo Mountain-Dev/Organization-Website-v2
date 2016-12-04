@@ -16,9 +16,9 @@
         @foreach (var item in ((List<organization>)Model[0]))
             {
                 organization org = (organization)item;
-            <a href="#" class="list-group-item">
+            <a class="list-group-item" onclick="location.href='@Url.Action("DisplayOrganization", "Home", org.organization_id)'">
                 @org.organization_name
             </a>
         }
     </div>
-</div>
+</div> 
